@@ -1,19 +1,26 @@
-# Changelog
+# v0.6.4
 
-All notable changes to this project will be documented in this file.
+### Changed
+- Added 1.22.1 and 1.22.2 as options for version selection.
 
-## [v0.6.3]
+---
+
+# v0.6.3
 
 ### Changed
 - Added 1.21.7 as an option for version selection.
 
-## [v0.6.2]
+---
+
+# v0.6.2
 
 ### Changed
 - Added 1.22.x and 1.22.0 as an option for version selection.
 - Updated Dependencies.
 
-## [v0.6.1]
+---
+
+# v0.6.1
 
 ### Changed
 - Added 1.21.6 as an option for version selection.
@@ -21,7 +28,9 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - An odd issue with some mods selecting the wrong version for updating -- the mod in question was Terra Prety, but I'm sure the issue went unnoticed with other mods as well.
 
-## [v0.6.0]
+---
+
+# v0.6.0
 
 ### Added
 - Added an Ignore column and matching logic to ignore checking for updates on specific mods in the event a new version of a mod causes issues, but an older version works fine.
@@ -34,7 +43,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.5.2]
+# v0.5.2
 
 ### Added
 - Added support for specific game versions ranging from 1.20.0 to 1.21.4.
@@ -44,7 +53,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.5.1] - 9-20-2025
+# v0.5.1
 
 ### Added
 - Integrated NuGet.Versioning to improve semantic version sorting.
@@ -54,7 +63,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.5.0] - 9-20-2025
+# v0.5.0
 
 ### Added
 - Added a button to copy the entire mod list (useful for quickly sharing in places like a Discord server).
@@ -65,7 +74,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.4.0] - 09-18-2025
+# v0.4.0
 
 ### Added
 - MahApps.Metro.IconPacks.SimpleIcons for better brand icons.  
@@ -78,7 +87,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Discord button replaced with a Buy Me a Coffee button.  
-- "Has Update"*column renamed to "Update".  
+- "Has Update" column renamed to "Update".  
 - Update column now displays a checkmark icon instead of a checkbox control.  
 - Compiler warnings cleaned up (~20 resolved).  
 - Substantial code refactoring, consolidating duplicate functionality into helper methods.  
@@ -97,7 +106,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.3.0] - 09-17-2025
+# v0.3.0
 
 ### Added
 - Game version selection dropdown for finding the most recent mod updates by [major.minor](https://semver.org) version (e.g. `1.21.x`).  
@@ -117,7 +126,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.2.2] - 09-16-2025
+# v0.2.2
 
 ### Added
 - Confirmation prompt before downloading all mods.
@@ -127,7 +136,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.2.1] - 09-16-2025
+# v0.2.1
 
 ### Added
 - New dialog type.
@@ -138,7 +147,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.2.0.0] - 09-16-2025
+# v0.2.0.0
 
 ### Added
 - Buttons and logic for refreshing the mods folder, browsing for a different mods folder, and joining the Discord server for our Vintage Story server.  
@@ -158,7 +167,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.1.0] - 09-14-2025
+# v0.1.0
 
 ### Added
 - Moved the mods folder textbox to the title bar.
@@ -182,11 +191,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.0.3] - 09-14-2025
+# v0.0.3
 
 ### Added
 - Added game version dropdown selection.
-
 - Added a check for mod updates button.
 
 ### Changed
@@ -194,20 +202,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v0.0.2] - 09-14-2025
+# v0.0.2
 
 ### Added
 - Added logic for handling inconsistent json field naming. (e.g. X mod uses "Name" while Y mod uses "name")
-
 - Added versioning to the project file.
 
 ### Changed
 - Switched from System.Text.Json to Newtonsoft.Json.Linq, this was mainly due to some mod authors leaving a trailing comma at the end of their modinfo.json causing the system.text JSON parser to fail.
-
 - Increased default app window size
 
 ---
 
-## [v0.0.1] - 09-13-2025
+# v0.0.1
+
 ### Added
 - Initial commit of the project, barebones at this point.
