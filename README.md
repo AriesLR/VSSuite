@@ -1,25 +1,18 @@
-<p align="center">
-  <h1 align="center">VSSuite</h1>
-  
-  <a href="https://github.com/AriesLR/VSSuite/releases">
-    <img src="https://img.shields.io/github/v/release/AriesLR/VSSuite?color=emerald" alt="GitHub Release">
-  </a>
-  <a href="docs/version/CHANGELOG.md">
-    <img src="https://img.shields.io/badge/changelog-latest-blue" alt="Changelog">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/AriesLR/VSSuite?color=orange" alt="License">
-  </a>
-  
-  <br><br>
+<div align="center">
 
-  <a href="https://www.patreon.com/c/arieslr/membership">
-    <img src="https://img.shields.io/badge/Patreon-F96854?style=flat&logo=patreon&logoColor=white" alt="Patreon">
-  </a>
-  <a href="https://www.buymeacoffee.com/arieslr">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee">
-  </a>
-</p>
+  # VSSuite
+
+  <a href="https://github.com/AriesLR/VSSuite/releases"><img src="https://img.shields.io/github/v/release/AriesLR/VSSuite?color=emerald" align="center"></a>
+  <a href="docs/version/CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-latest-blue" align="center"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/AriesLR/VSSuite?color=orange" align="center"></a>
+
+  <br/>
+
+
+  <a href="https://www.patreon.com/c/arieslr/membership"><img src="https://img.shields.io/badge/Patreon-F96854?style=flat&logo=patreon&logoColor=white" align="center"></a>
+  <a href="https://www.buymeacoffee.com/arieslr"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black" align="center"></a>
+
+</div>
 
 ## Table of Contents
 
@@ -35,7 +28,6 @@
 - [Screenshots](#infographic)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
-- [Tips](#tips)
 
 ## How It Works  
 When the user launches the app, they are prompted to select their mod folder. The app scans every `modNameHere.zip` in the folder, reading the `modinfo.json` inside each archive to populate the main table with relevant information.  
@@ -132,11 +124,6 @@ Updating **VSSuite** is easy. Since the app is fully portable, all you need to d
 ## License
 
 [MIT License](LICENSE)
-
-## Tips
-[Buy Me a Coffee](https://www.buymeacoffee.com/arieslr)
-
-[Patreon](https://www.patreon.com/c/arieslr/membership)
 
 ---
 
