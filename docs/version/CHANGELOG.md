@@ -1,20 +1,73 @@
 ## [v0.7.0] - TBD
 
+### Developer Notes & Design Philosophy
+
+#### Why VSSuite remains Windows-Only
+
+While expanding support to Linux is a frequent request, branching out would require a massive overhaul of both the UI layer and the backend architecture as I use a Windows exclusive architecture and a UI framework on top of that. As a solo developer, I simply do not have the storage space to set up, test, and maintain multiple operating systems. More importantly, it is incredibly time consuming. For now, keeping the scope limited to Windows ensures I can maintain VSSuite without burning out. That being said, this doesn't exclude the possibility I decide to move to a different architecture and pick up Linux support in the future.
+
+#### Streamlining Game Version Updates
+
+Historically, compatibility version numbers were hardcoded in the application. This meant that every single time Vintage Story released an update, I had to go through a 12 step update process: updating the version numbers, compiling the new build, zipping packages, running separate VirusTotal scans for the raw executable and zip file, updating cryptographic hashes (SHA-256), and manually syncing releases across both GitHub and the Vintage Story Mod Repo. This process took upwards of 30 minutes per minor patch. 
+
+To solve this, game versions are now fetched from a remote JSON file hosted on the tool's GitHub. Because VSSuite already requires an active internet connection to scan the mod database, this shift changes absolutely nothing about the app's core functionality or performance. However, it completely changes the game for me, cutting my update process down from a 30 minute chore to a 1 minute file push. This ensures the app stays up to date with new game releases without forcing users to download a new update every few weeks.
+
+#### The WebView2 Dependency & Embedded Mod Browser
+
+To maximize convenience, this update introduces an embedded Mod Browser that allows you to explore the official mod database without leaving the app. This feature utilizes Microsoft’s WebView2 runtime. If your system doesn't already have it installed (many modern applications use it under the hood), VSSuite will prompt you to download the tiny ~2MB installer, which takes up roughly 250MB of disk space once unpacked. 
+
+For strict security reasons, the embedded browser is heavily sandboxed. URL navigation is completely locked down, meaning it cannot be used as a regular web browser. Because fully securing a web browser requires infrastructure, limiting navigation ensures you aren't exposed to unnecessary vulnerabilities. Additionally, the login button on the mod site has been intentionally disabled. To guarantee your privacy and data safety, VSSuite is designed to never handle, capture, or even allow the input of your sensitive account credentials.
+
+### Patch Notes:
+
 ### Added
-- New features or functionality added.
+- **Sidebar Navigation Menu:** Introduced a sidebar navigation menu to access many of the new features.
+- **Mod Browser:** Integrated an embedded browser to browse mods.vintagestory.at directly within the app.
+- **App Settings Menu:** Added a dedicated settings panel featuring:
+  - Default game version dropdown (sets the game version selected on launch).
+  - "Check for updates on startup" toggle.
+  - Manual "Check for Updates" button.
+  - Custom UI visibility toggles for the Ignore, Mod Page, File Name, and Game Version columns.
+  - **Safe Mode Toggle:** Restricts downloads to stable mod releases only. When enabled, the tool automatically filters out development, and release candidate builds (e.g., 3.2.1-dev.1 or 1.2.3-rc.3) to ensure stability.
+- **Modlist Tools Menu:** Added a utility menu featuring modlist related tools:
+  - Copy modlist with Discord markdown formatting.
+  - Copy raw text modlist.
+  - Reinstall all mods.
+  - Scan and remove duplicate mods.
+- **Changelog Viewer:** Added a native Markdown viewer to read VSSuite update history in-app.
+- **Tips Menu:** Introduced a tips flyout menu to highlight ways to support me and the tool.
+- **Information Panel:** Added an information panel to clarify any confusing application behaviors.
+- **Pill Displays:** Added status badges above the mod table to track totals for total mods, updates disabled, version mismatches, and available updates.
+- **Search Bar:** Embedded a search filter into the application's title bar to filter your modlist by mod name.
+- **App Version Display:** Added the current application build version into the window title bar.
+- **Table Sorting:** Enabled column sorting for the download button column.
+- **Dependencies:**
+  - Added Microsoft.Web.WebView2 as a dependency.
+  - Added MdXaml as a dependency to parse Markdown files.
+- **Application & Deployment:**
+  - Integrated missing assembly and copyright metadata into the executable.
+  - Digitally signed the application's executable to improve security.
 
 ### Changed
-- Changes to existing functionality.
+- **The Rebrand:** Rebranded the project from "VS-Mod-Update-Tool" to "VSSuite" for a more memorable name.
+- **UI & Layout Overhaul:**
+  - Overhauled VSSuite's theme and increased overall default window dimensions by 10%.
+  - Consolidated scattered UI actions into a control area located above the main mod table.
+  - Integrated folder browser controls into the file path bar.
+- **Mod Table Columns:**
+  - Merged the Update column and the previously unlabeled Mod Download column into a single column.
+  - Updated the Latest Version column to always show the true latest version (even if incompatible with your selected game version), displaying the version in yellow.
+  - Enhanced the Latest Version text color to shift to green when an applicable update is available.
+- **Game Version Dropdown:** Redesigned the version selector layout to make the currently active target version clearly visible at a glance.
+- **Dependencies:** Upgraded NuGet.Versioning from v7.3.0 to v7.6.0.
+- **Under the Hood:** Performed light code refactoring across core methods to align with modern C# standards.
 
 ### Fixed
-- Bugs that have been fixed.
-
-### Removed
-- Deprecated or removed features.
+- Resolved outstanding compiler nullability warnings throughout the codebase.
 
 ---
 
-## [0.6.4] - 5-15-2026
+## [v0.6.4] - 5-15-2026
 
 ### Changed
 - Added 1.22.1 and 1.22.2 as options for version selection.
