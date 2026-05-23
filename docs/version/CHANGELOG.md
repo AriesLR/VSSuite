@@ -1,4 +1,4 @@
-## [v0.7.0] - TBD
+## [v0.7.0] - 5-22-2026
 
 ### Developer Notes & Design Philosophy
 
