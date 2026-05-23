@@ -20,7 +20,7 @@ namespace VSSuite.Resources.ViewModels
 
         public MainWindowViewModel()
         {
-            // 1. Top Menu Items
+            // Top Menu Items (Information, Modlist Tools, Mod Browser)
             MenuItems =
             [
                 new MenuItem
@@ -43,7 +43,7 @@ namespace VSSuite.Resources.ViewModels
                 }
             ];
 
-            // 2. Bottom Menu Items
+            // Bottom Menu Items (App Settings, Changelog, Tips)
             OptionsMenuItems =
             [
                 new MenuItem

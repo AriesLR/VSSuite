@@ -9,7 +9,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <!-- <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Green.xaml" /> -->
                 <ResourceDictionary Source="pack://application:,,,/VSSuite;component/Resources/Themes/Dark.DarkOliveGreen.xaml" />
             </ResourceDictionary.MergedDictionaries>
 

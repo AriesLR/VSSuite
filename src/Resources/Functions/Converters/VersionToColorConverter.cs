@@ -32,7 +32,7 @@ namespace VSSuite.Resources.Functions.Converters
                         // Global update
                         if (hasVersionMismatch)
                         {
-                            if (System.Windows.Application.Current.TryFindResource("Alr.Brushes.YellowBase") is System.Windows.Media.Brush yellowBrush)
+                            if (System.Windows.Application.Current.TryFindResource("Alr.Brushes.YellowBase") is System.Windows.Media.Brush yellowBrush) // Yellow Brush
                             {
                                 return yellowBrush;
                             }
@@ -40,7 +40,7 @@ namespace VSSuite.Resources.Functions.Converters
                         }
 
                         // Update matching version selection
-                        if (System.Windows.Application.Current.TryFindResource("Alr.Brushes.GreenBase") is System.Windows.Media.Brush greenBrush)
+                        if (System.Windows.Application.Current.TryFindResource("Alr.Brushes.GreenBase") is System.Windows.Media.Brush greenBrush) // Green Brush
                         {
                             return greenBrush;
                         }
@@ -50,7 +50,7 @@ namespace VSSuite.Resources.Functions.Converters
             }
 
             // Default Brush
-            return System.Windows.Application.Current.TryFindResource("SecondaryAccent.Brush.WA400") ?? System.Windows.Media.Brushes.Gray;
+            return System.Windows.Application.Current.TryFindResource("SecondaryAccent.Brush.WA400") ?? System.Windows.Media.Brushes.Gray; // Grey Brush (Gray, why do I as an American always default to Grey? Am I broken?)
         }
 
         // Unused

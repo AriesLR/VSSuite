@@ -11,6 +11,7 @@ namespace VSSuite.Resources.Functions.Services
             return (Application.Current.MainWindow as MetroWindow)!;
         }
 
+        // Show Progress Bar
         public static async Task ShowProgress(string title, string message, Func<IProgress<double>, Task> operation)
         {
             if (Application.Current.MainWindow is not MetroWindow mainWindow)
@@ -30,6 +31,7 @@ namespace VSSuite.Resources.Functions.Services
             }
         }
 
+        // Yes/No
         public static async Task<bool> ShowYesNo(string title, string message)
         {
             var mainWindow = GetMainWindow() ?? throw new InvalidOperationException("Main window is not a MetroWindow or has not been set.");
@@ -49,18 +51,21 @@ namespace VSSuite.Resources.Functions.Services
             return result == MessageDialogResult.Affirmative;
         }
 
+        // Info
         public static async Task ShowInfo(string title, string message)
         {
             var mainWindow = GetMainWindow() ?? throw new InvalidOperationException("Main window is not a MetroWindow or has not been set.");
             await mainWindow.ShowMessageAsync(title, message, MessageDialogStyle.Affirmative);
         }
 
+        // Warning
         public static async Task ShowWarning(string message)
         {
             var mainWindow = GetMainWindow() ?? throw new InvalidOperationException("Main window is not a MetroWindow or has not been set.");
             await mainWindow.ShowMessageAsync("Warning", message, MessageDialogStyle.Affirmative);
         }
 
+        // Error
         public static async Task ShowError(string message)
         {
             var mainWindow = GetMainWindow() ?? throw new InvalidOperationException("Main window is not a MetroWindow or has not been set.");
