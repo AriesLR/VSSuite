@@ -120,31 +120,25 @@ Updating **VSSuite** is easy. Since the app is fully portable, all you need to d
 
  
 ## Screenshots
-<p align="center">
-  <kbd>
-    <a href="docs/img/01.png"><img src="docs/img/01.png" width="45%" alt="Main Page" /></a>
-  </kbd>
-  <kbd>
-    <a href="docs/img/02.png"><img src="docs/img/02.png" width="45%" alt="Information Flyout" /></a>
-  </kbd>
-  <br />
-  <kbd>
-    <a href="docs/img/03.png"><img src="docs/img/03.png" width="45%" alt="Modlist Tools Flyout" /></a>
-  </kbd>
-  <kbd>
-    <a href="docs/img/04.png"><img src="docs/img/04.png" width="45%" alt="Mod Browser Flyout" /></a>
-  </kbd>
-  <br />
-  <kbd>
-    <a href="docs/img/05.png"><img src="docs/img/05.png" width="45%" alt="Application Settings Flyout" /></a>
-  </kbd>
-  <kbd>
-    <a href="docs/img/06.png"><img src="docs/img/06.png" width="45%" alt="Search Filtering" /></a>
-  </kbd>
-  <kbd>
-    <a href="docs/img/Before_After.png"><img src="docs/img/Before_After.png" width="45%" alt="Search Filtering" /></a>
-  </kbd>
-</p>
+<table align="center">
+  <tr>
+    <td><a href="docs/img/01.png"><img src="docs/img/01.png" alt="Main Page" /></a></td>
+    <td><a href="docs/img/02.png"><img src="docs/img/02.png" alt="Information Flyout" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="docs/img/03.png"><img src="docs/img/03.png" alt="Modlist Tools Flyout" /></a></td>
+    <td><a href="docs/img/04.png"><img src="docs/img/04.png" alt="Mod Browser Flyout" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="docs/img/05.png"><img src="docs/img/05.png" alt="Application Settings Flyout" /></a></td>
+    <td><a href="docs/img/06.png"><img src="docs/img/06.png" alt="Search Filtering" /></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="docs/img/Before_After.png"><img src="docs/img/Before_After.png" alt="Before / After Comparison" /></a>
+    </td>
+  </tr>
+</table>
 
 
 ## Acknowledgements
